@@ -12,7 +12,7 @@ class CountdownTimer {
   start() {
 
     const targetDateMillisec = new Date(this.targetDate).getTime();
-    console.log("targetTime", targetDateMillisec)
+    // console.log("targetTime", targetDateMillisec)
     this.pasteMarkupTamplate()
     
 
@@ -25,7 +25,7 @@ class CountdownTimer {
 
       const deltaTime = targetDateMillisec - currentTime;
       const convertedTime = this.getTimeComponents(deltaTime);
-      console.log(convertedTime);
+      // console.log(convertedTime);
       this.pasteTimerComponents(this.getMarkupElements(), convertedTime)
 
     }, 1000);
@@ -69,7 +69,7 @@ class CountdownTimer {
 
   getTimerBlockByIdEl() {
     const timerBlockByIdEl = document.querySelector(`${this.selector}`)
-
+    
     return timerBlockByIdEl
   }
   
